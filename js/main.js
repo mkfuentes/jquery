@@ -55,15 +55,3 @@ $(document).on('click','.btn-danger', (event) => {
 /* -----
 */
 
-var userArray = []
-
-
-$('.guardar .btn').on('click', () => {
-    let nombre = $('#nombre').val();
-    let edad = $('#edad').val();
-    let telefono = $('#telefono').val();
-    //creacion de objeto
-    let userObject = {nomnbre, edad, telefono}
-    userArray.push(userObject)
-
-
