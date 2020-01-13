@@ -12,97 +12,28 @@
 </head>
 ​
 <body>
-    <div id="square-wrapper" class="square-wrapper d-flex">
-        <div class="square square-red"></div>
-        <div class="square square-blue"></div>
-        <div class="square square-peru"></div>
-    </div>
-    <div class="radio-wrapper mt-3 border border-primary d-flex rounded justify-content-around p-3">
-        <div class="input-group mx-1">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <input class="toggle-flex" type="radio" name="toggle-flex" aria-label="Radio button for following text input" value="space-around">
-              </div>
-            </div>
-            <label for="">Space around</label>
-          </div>
-          <div class="input-group mx-1">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <input class="toggle-flex" type="radio" name="toggle-flex" aria-label="Radio button for following text input" value="space-between">
-              </div>
-            </div>
-            <label for="">Space between</label>
-          </div>
-          <div class="input-group mx-1">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <input class="toggle-flex" type="radio" name="toggle-flex" aria-label="Radio button for following text input" value="center">
-              </div>
-            </div>
-            <label for="">Center</label>
-          </div>
-          <div class="input-group mx-1">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <input class="toggle-flex" type="radio" name="toggle-flex" aria-label="Radio button for following text input" value="space-evenly">
-              </div>
-            </div>
-            <label for="">Evenly</label>
-          </div>
-          <div class="input-group mx-1">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <input class="toggle-flex" type="radio" name="toggle-flex" aria-label="Radio button for following text input" value="flex-start">
-              </div>
-            </div>
-            <label for="">Start</label>
-          </div>
-          <div class="input-group mx-1">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <input class="toggle-flex" type="radio" name="toggle-flex" aria-label="Radio button for following text input" value="flex-end">
-              </div>
-            </div>
-            <label for="">End</label>
-          </div>
-    </div>
-    <div id="flex-btn" class="btn btn-primary mt-3 w-25">Go flex!</div>
-    <br>
-    <div class="to-do-wrapper w-50 d-block mx-auto mt-3 p-3 border border-success rounded">
-        <div class="form-group">
-            <label for="">Agregar Tarea</label>
-            <input id="task-input" type="text" class="form-control">
-            <div class="btn btn-primary mt-3">Agregar tarea</div>
-        </div>
-        <div class="task-wrapper mt-3">
-            <ul class="task-list">
-                
-            </ul>
-        </div>
-    </div>
-    
-
-    <form action="" class="w-50 mx-auto d-block p-3 border border-danger rounded my-3">
-        <div class="form-group">
-          <label for="">Nombre</label>
-          <input id="nombre" type="text" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="">Edad</label>
-          <input id="edad" type="text" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="">Teléfono</label>
-          <input id="telefono" type="text" class="form-control">
-        </div>
-        <div class="guardar btn btn-primary">Guardar</div>
-      </form>
-  ​
-      <table id="formulario" class="table table-striped">
-        <thead>
+    <form action="" class="w-50 mx-auto d-block p-3 border rounded my-3 bg-dark text-white">
+      <div class="form-group">
+        <label for="">Nombre</label>
+        <input id="user-name" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Edad</label>
+        <input id="user-age" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Teléfono</label>
+        <input id="user-phone" type="text" class="form-control">
+      </div>
+      <div onclick="getUserData()" class="btn btn-primary">Guardar</div>
+    </form>
+​
+    <div id="users-table" class="table-wrapper w-75 d-block mx-auto">
+      <table class="table table-striped w-100 d-block mx-auto">
+        <thead class="w-100">
           <tr>
             <th scope="col">#</th>
+            <th scope="col">Key</th>
             <th scope="col">Nombre</th>
             <th scope="col">Edad</th>
             <th scope="col">Teléfono</th>
@@ -110,17 +41,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Israel Salinas Martínez</td>
-            <td>30</td>
-            <td>5543788096</td>
-            <td><div class="eliminar btn btn-danger">Eliminar</div></td>
-          </tr>
+          
         </tbody>
       </table>
-
-
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
